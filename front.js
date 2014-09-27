@@ -6,21 +6,8 @@ L.K.Map.addInitHook(function () {
             pointToLayer = function (feature, latlng) {
                 return L.circleMarker(latlng);
             },
-            renderRow = function (container, key, value) {
-                var tr = L.DomUtil.create('tr', '', container);
-                L.DomUtil.create('th', '', tr).innerHTML = key;
-                L.DomUtil.create('td', '', tr).innerHTML = value;
-            },
-            renderTable = function (properties) {
-                var table = L.DomUtil.create('table');
-
-                for (var key in properties) {
-                    renderRow(table, key, properties[key]);
-                }
-                return table;
-            },
             onEachFeature = function (feature, layer) {
-                layer.bindPopup(renderTable(feature.properties));
+                layer.bindPopup(L.K.Util.renderPropertiesTable(feature.properties));
             };
         this.osmdatalayer = L.geoJson(null, {pointToLayer: pointToLayer, onEachFeature: onEachFeature});
         var fetch = function () {
