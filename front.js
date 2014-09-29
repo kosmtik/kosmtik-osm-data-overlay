@@ -11,8 +11,8 @@ L.K.Map.addInitHook(function () {
             };
         this.osmdatalayer = L.geoJson(null, {pointToLayer: pointToLayer, onEachFeature: onEachFeature});
         var fetch = function () {
-            this.setState('loading');
             if (L.K.Config.osmdatalayer) {
+                this.setState('loading');
                 bounds = this.getBounds();
                 url = L.Util.template(urlTemplate, {
                     e: bounds.getEast(),

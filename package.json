@@ -1,6 +1,6 @@
 {
   "name": "kosmtik-osm-data-overlay",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Display an interactive OSM data overlay in Kosmtik",
   "main": "index.js",
   "scripts": {
