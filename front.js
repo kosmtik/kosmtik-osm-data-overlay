@@ -50,7 +50,7 @@ L.K.Map.addInitHook(function () {
             altKey: true,
             callback: shortcutCallback,
             context: this,
-            description: 'Toggle overlay'
+            description: 'Toggle OSM data overlay'
         });
     });
 });
