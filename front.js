@@ -39,5 +39,18 @@ L.K.Map.addInitHook(function () {
             if (e.field === 'osmdatalayer') L.bind(fetch, this)();
         }, this);
         this.on('moveend', fetch);
+        var shortcutCallback = function () {
+            L.K.Config.osmdatalayer = !L.K.Config.osmdatalayer;
+            L.bind(fetch, this)();
+            this.settingsForm.fetchAll();
+        };
+        this.shortcuts.add({
+            keyCode: L.K.Keys.D,
+            ctrlKey: true,
+            altKey: true,
+            callback: shortcutCallback,
+            context: this,
+            description: 'Toggle overlay'
+        });
     });
 });
