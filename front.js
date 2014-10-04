@@ -1,6 +1,6 @@
 L.K.Map.addInitHook(function () {
     this.whenReady(function () {
-        this.settingsForm.addElement(['osmdatalayer', {handler: L.K.Switch, label: 'OSM data layer'}]);
+        this.settingsForm.addElement(['osmdatalayer', {handler: L.K.Switch, label: 'OSM data layer (alt-ctrl-D)'}]);
         var urlTemplate = 'http://overpass-api.de/api/interpreter?data=[out:json];(node({s},{w},{n},{e});<;);out;',
             url, bounds,
             pointToLayer = function (feature, latlng) {
