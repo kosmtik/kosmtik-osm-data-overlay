@@ -11,3 +11,7 @@ On your Kosmtik root, type:
 ## Preview
 
 ![screenshot](https://raw.github.com/kosmtik/kosmtik-osm-data-overlay/master/screenshot.png "Screenshot of kosmtik-osm-data-overlay")
+
+## Issues and feature requests
+
+Please report any issue or feature request on the [main kosmtik repository](https://github.com/kosmtik/kosmtik/issues).
