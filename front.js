@@ -39,18 +39,18 @@ L.K.Map.addInitHook(function () {
             if (e.field === 'osmdatalayer') L.bind(fetch, this)();
         }, this);
         this.on('moveend', fetch);
-        var shortcutCallback = function () {
+        var commandCallback = function () {
             L.K.Config.osmdatalayer = !L.K.Config.osmdatalayer;
             L.bind(fetch, this)();
             this.settingsForm.fetchAll();
         };
-        this.shortcuts.add({
+        this.commands.add({
             keyCode: L.K.Keys.D,
             ctrlKey: true,
             altKey: true,
-            callback: shortcutCallback,
+            callback: commandCallback,
             context: this,
-            description: 'Toggle OSM data overlay'
+            name: 'OSM data layer: toggle'
         });
     });
 });

@@ -1,6 +1,6 @@
 {
   "name": "kosmtik-osm-data-overlay",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Display an interactive OSM data overlay in Kosmtik",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,5 @@
   "peerDependencies": {
     "osmtogeojson": "^2.1.0"
   },
-  "kosmtik": "~0.0.5"
+  "kosmtik": "~0.0.9"
 }
