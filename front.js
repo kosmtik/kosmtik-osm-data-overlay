@@ -1,3 +1,4 @@
+/*global osmtogeojson*/
 L.K.Map.addInitHook(function () {
     this.whenReady(function () {
         this.settingsForm.addElement(['osmdatalayer', {handler: L.K.Switch, label: 'OSM data layer (alt-ctrl-D)'}]);
@@ -36,7 +37,7 @@ L.K.Map.addInitHook(function () {
             }
         };
         this.on('settings:synced', function (e) {
-            if (e.field === 'osmdatalayer') L.bind(fetch, this)();
+            if (e.helper.field === 'osmdatalayer') L.bind(fetch, this)();
         }, this);
         this.on('moveend', fetch);
         var commandCallback = function () {
