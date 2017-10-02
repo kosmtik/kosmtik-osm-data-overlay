@@ -53,5 +53,16 @@ L.K.Map.addInitHook(function () {
             context: this,
             name: 'OSM data layer: toggle'
         });
+        var openInOSM = function () {
+            window.open(`https://openstreetmap.org#map=${this.getZoom()}/${this.getCenter().lat}/${this.getCenter().lng}`, '_blank');
+        };
+        this.commands.add({
+            keyCode: L.K.Keys.O,
+            altKey: true,
+            ctrlKey: true,
+            callback: openInOSM,
+            context: this,
+            name: 'OSM: open in openstreetmap.org'
+        });
     });
 });
